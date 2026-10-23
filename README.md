@@ -46,9 +46,21 @@ Focus on implementing:
 - and anything else you think is relevant
 
 ## Setup and tests
-Install uv. It installs Python 3.15 if needed.
+Install Python 3.11 or newer. 
+
+macOS/Linux:
 
 ```sh
-uv sync --locked
-uv run pytest -q
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pytest -q
+```
+
+Windows PowerShell:
+
+```powershell
+py -3 -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m pytest -q
 ```
